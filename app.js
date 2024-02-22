@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.get('/.well-known/apple-app-site-association', (req, res) => {
+app.get('/apple-app-site-association', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
-    res.sendFile(path.join(__dirname, '.well-known', 'apple-app-site-association'));
+    res.sendFile(__dirname + '/apple-app-site-association');
 });
 app.get("/", (req, res) => res.type('html').send(html));
 
@@ -17,7 +17,8 @@ const html = `
 <!DOCTYPE html>
 <html>
   <head>
-      <meta name="apple-app-site-association" content="/.well-known/apple-app-site-association">
+      <meta name="apple-app-site-association" content="./apple-app-site-association">
+ 
     <title>Hello from Render!</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
