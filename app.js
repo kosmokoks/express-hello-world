@@ -17,6 +17,7 @@ const html = `
 <!DOCTYPE html>
 <html>
   <head>
+      <meta name="apple-app-site-association" content="/.well-known/apple-app-site-association">
     <title>Hello from Render!</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
