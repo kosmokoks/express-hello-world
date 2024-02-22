@@ -4,7 +4,7 @@
       "details": [
            {
              "appID": "M7YC7987L5.org.reactjs.native.example.selmoNotifyApp",
-             "paths": ["*"]
+             "paths": ["*", "/product/*/*"]
            }
        ]
    }
