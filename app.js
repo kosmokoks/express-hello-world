@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.get('/apple-app-site-association', (req, res) => {
+    res.sendFile(__dirname + '/apple-app-site-association');
+});
 app.get("/", (req, res) => res.type('html').send(html));
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
