@@ -60,7 +60,7 @@ const html = `
   </head>
   <body>
     <section>
-    <a href="selmoapp://product/984957/5">Go to app</a>
+    <a href="selmoapp://product/984957/5?fromSelmo=1">Go to app</a>
       Hello from Render!
     </section>
   </body>
