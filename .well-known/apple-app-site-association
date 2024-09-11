@@ -1,21 +1,11 @@
 {
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": "M7YC7987L5.org.reactjs.native.example.selmoNotifyApp",
-                "components": [
-                    {
-                        "/": "/",
-                        "comment": "Match any URL to avoid breaking other routes",
-                        "exclude": true
-                    },
-                    {
-                        "/product/10/5": "/product/:id/:shop_id",
-                        "comment": "Match the specific URL '/product/10/5' to the product screen with parameters"
-                    }
-                ]
-            }
-        ]
-    }
+  "applinks": {
+      "apps": [],
+      "details": [
+           {
+             "appID": "M7YC7987L5.org.reactjs.native.example.selmoNotifyApp",
+             "paths": ["*"]
+           }
+       ]
+   }
 }
