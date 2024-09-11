@@ -1,42 +1,10 @@
 const express = require("express");
-const path = require("path");
 const app = express();
 const port = process.env.PORT || 3001;
-const fs = require('fs');
 
 app.get('/apple-app-site-association', (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.sendFile(__dirname + '/apple-app-site-association');
-});
-//
-// app.use("/.well-known", express.static(path.join(__dirname, ".well-known")));
-// app.get("/.well-known/apple-app-site-association", (req, res) => {
-//     res.setHeader('Content-Type', 'application/json');
-//     res.sendFile( path.join(__dirname, ".well-known/apple-app-site-association"));
-// });
-
-app.get('/.well-known/apple-app-site-association', (req, res) => {
-    const filePath = path.join(__dirname, '.well-known', 'apple-app-site-association');
-
-    fs.readFile(filePath, (err, data) => {
-        if (err) {
-            console.error('Błąd odczytu pliku:', err);
-            return res.status(500).send('Błąd serwera');
-        }
-
-        res.set({
-            'Content-Type': 'application/json',
-            'X-Content-Type-Options': 'nosniff'
-        });
-
-        res.removeHeader('X-Powered-By');
-        res.removeHeader('Content-Disposition');
-
-        // Logowanie nagłówków
-        console.log('Nagłówki odpowiedzi:', res._headers);
-
-        res.send(data);
-    });
 });
 
 app.get("/", (req, res) => res.type('html').send(html));
