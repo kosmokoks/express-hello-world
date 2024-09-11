@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 
 app.use("/.well-known", express.static(path.join(__dirname, ".well-known")));
 app.get("/.well-known/apple-app-site-association", (req, res) => {
-    res.sendFile( path.join(__dirname, ".well-known/apple-app-site-association.json"));
+    res.sendFile(path.join(__dirname, ".well-known/apple-app-site-association.json"));
 });
 
 app.get("/", (req, res) => res.type('html').send(html));
