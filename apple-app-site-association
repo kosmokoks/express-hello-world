@@ -1,16 +1,18 @@
 {
-  "applinks": {
-      "apps": [],
-      "details": [
-           {
-             "appID": "M7YC7987L5.org.reactjs.native.example.selmoNotifyApp",
-             "paths": ["*"]
-           }
-       ]
-   },
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "M7YC7987L5.org.reactjs.native.example.selmoNotifyApp",
+                "paths": [
+                    "*"
+                ]
+            }
+        ]
+    },
     "webcredentials": {
-              "apps": [
-                  "M7YC7987L5.org.reactjs.native.example.selmoNotifyApp",
-              ]
-          }
+        "apps": [
+            "M7YC7987L5.org.reactjs.native.example.selmoNotifyApp"
+        ]
+    }
 }
